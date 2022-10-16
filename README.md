@@ -5,7 +5,7 @@
 - การทำให้การทำนายสุนัขของเล่นนั้นมีประสิทธิภาพมากขึ้น มีผลให้ประสิทธิภาพการทำนายสุนัขจริงๆลดลงเล็กน้อย
 - การใช้ EfficientNet ที่มี Top-1 Accuracy ของ Imagenet สูงสุดจาก model ที่ทำการทดลองทั้งหมด มาเป็น feature extractor ทำให้ได้ Accuracy ที่ดีที่สุดบน Test Data ของเราด้วย
 
-## 1.Introduction
+## Introduction
 
 การ classify สุนัขของเล่นนั้น เป็นสิ่งที่ pretrained model ที่ทำการ train ด้วย Imagenet dataset นั้นยังทำได้ไม่ดีนัก
 เนื่องจากใน 1000 classes ของ imagenet มีเพียง 5 class เท่านั้นที่จัดเป็นสุนัขของเล่น ('miniature_poodle','toy_terrier','toy_poodle','miniature_schnauzer','miniature_pinscher')
@@ -13,23 +13,15 @@
 ด้วยการรวมรวบรูปภาพของสุนัขจริง และสุนัขของเล่นขึ้นมาเพื่อเป็น dataset สำหรับใช้ในการ train model สำหรับแบ่งแยกระหว่างสุนัขจริง และสุนัขของเล่น
 
 
-## 2. Dataset
-### Data source
-The Five Floating Buddha Statues are mostly rare art items belonging to personal or family property; thus, the set of images cannot be collected by photographing itself. Therefore, the various sources on the internet would be suitable material as the solution, especially the Thai Amulet websites being like a gold mine, filled with Buddha images in good condition which represent their details and patterns.
-
-
-| Class Code No.| Thai Name | English Name |
-| :------: | ------ | ------ | 
-| 0 | หลวงพ่อโสธร | Sothon |
-| 1 | หลวงพ่อโต | Toh | 
-| 2 | หลวงพ่อวัดบ้านแหลม| Wat Ban Laem | 
-| 3 | หลวงพ่อวัดไร่ขิง | Wat Rai Khing | 
-
 ## Data
+ทำการรวบรวมรูปภาพโดยแบ่งเป็น 4 classes คือ 
 
-ทางกลุ่มเราได้ทำการรวบรวมรูปภาพโดยแบ่งเป็น 2 classes คือ 
-1. สุนัขจริง (Real Dog) 
-2. สุนัขของเล่น (Toy Dog)
+| Class Code No.| English Name |
+| :------: | ------ | 
+| 0 | combtail_crowntail |
+| 1 | double | 
+| 2 | halfmoon | 
+| 3 | spadetail | 
 
 #### Data source
 
